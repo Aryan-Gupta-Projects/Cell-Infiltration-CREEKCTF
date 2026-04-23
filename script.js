@@ -5,14 +5,14 @@ function login() {
     document.getElementById("result").innerText =
         "Signal cascade evaluating genetic signature...";
 
+    // compare against fixed "true" credentials
     const whereClause =
-        "username === '" + username + "' && password === '" + password + "'";
+        "'" + username + "' === 'self' && '" + password + "' === 'ACE2'";
 
-   
     let result;
 
     try {
-        result = eval(whereClause); 
+        result = eval(whereClause);
     } catch (e) {
         result = false;
     }
